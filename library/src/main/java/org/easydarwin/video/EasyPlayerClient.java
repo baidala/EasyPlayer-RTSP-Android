@@ -375,7 +375,7 @@ public class EasyPlayerClient implements Client.SourceCallBack {
      * @return
      */
     public void play(final String url) {
-        if (lifecycler.getLifecycle().getCurrentState().isAtLeast(Lifecycle.State.CREATED)) {
+        /*if (lifecycler.getLifecycle().getCurrentState().isAtLeast(Lifecycle.State.CREATED)) {
             start(url, TRANSTYPE_TCP, Client.EASY_SDK_VIDEO_FRAME_FLAG | Client.EASY_SDK_AUDIO_FRAME_FLAG, "", "", null);
         } else {
             lifecycler.getLifecycle().addObserver(new LifecycleObserver() {
@@ -384,7 +384,8 @@ public class EasyPlayerClient implements Client.SourceCallBack {
                     start(url, TRANSTYPE_TCP, Client.EASY_SDK_VIDEO_FRAME_FLAG | Client.EASY_SDK_AUDIO_FRAME_FLAG, "", "", null);
                 }
             });
-        }
+        }*/
+        start(url, TRANSTYPE_TCP, Client.EASY_SDK_VIDEO_FRAME_FLAG | Client.EASY_SDK_AUDIO_FRAME_FLAG, "", "", null);
     }
 
     /**
